@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js练习</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin: 0;
+        }
+        #header{
+            /*float: left;*/
+            width: 200px;
+            height: 50px;
+            background-color:yellow;
+            color: black;
+        }
+        .next{
+            float: left;
+            /*浮动元素一定完全显示，只有标准流的内容才会被遮挡*/
+            width: 200px;
+            height:100px;
+            background-color: transparent;
+            color: pink;
+        }
+        .then{
+            /*position: static;*/
+            /*float: left;*/
+            width:100px;
+            height:150px;
+            background-color: blueviolet;
+            color: #000;
+        }
+        /*.bottom{*/
+            /*clear: left;*/
+        /*}*/
+    </style>
+    <script type="text/javascript">
+        function test() {
+            var message = "hi";//局部变量
+            alert(message);//错误
+        }
+        function _test() {
+            var _str;
+            alert(_str);//undefined
+            _str = "I love javascript,but it can't stand silly me.";
+            _str += "However,everything is possible.";
+            alert(_str);
+        }
+        function text$(){
+            var message = "Hello world!";
+            if(message){
+                alert("Value is true.");
+            }
+        }
+        function test$$(){
+//            判断这个参数是否:不是"数值"
+            alert(isNaN(NaN));
+            alert(isNaN(10));
+            alert(isNaN("10"));
+            alert(isNaN("blue"));
+            alert(isNaN(true));
+        }
+        function test$$$(){
+//          Boolean()转型函数可以将任意数据类型的值转换为布尔值
+            var string = "Hello world";
+            var number = 10;
+            var boolean1 = true;
+            var udfd = undefined;
+            alert(Boolean(string));
+            alert(Boolean(number));
+            alert(Boolean(boolean1));
+            alert(Boolean(udfd));
+        }
+        function test$$$$(){
+            var message ;
+            //var age;
+            alert(typeof message);
+            alert(typeof age);
+        }
+        function _$test(){
+            var message;
+//          var age;
+            alert(message);
+            alert(age);//不会显示的，没声明的变量不会被赋值为Undefined
+        }
+        function write1(){
+//            数值转换
+            document.write(Number(true));
+            document.write(Number(123));
+            document.write(Number(null));
+            document.write(Number(undefined));
+            document.write(Number(1.1));
+            document.write(Number(""));
+            document.write(Number("I am a boy."));
+            document.write(Number(00000000000001));
+            document.write(Number());
+            document.write(Number(true));
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <p>点击会弹出相关信息</p>
+        <label><input type="text" name="MyMessage" value="局部变量使用错误" onclick="test()"></label>
+    </div>
+    <div class="next">
+        <p>点击显示个性签名</p>
+        <input type="button" name="MyButton" value="个性签名" onclick="_test()">
+        <p>判断对错</p>
+        <input type="text" name="MyText" value="布尔值的检验" placeholder="布尔值的检验" onclick="text$()">
+    </div>
+    <!--<div class="bottom">-->
+        <div class="however">
+            <input type="button" name="MySecondButton" value="isNaN()函数的检验" onclick="test$$()">
+        </div>
+        <div class="footer">
+            <input type="button" name="MyThirdButton" value="转型函数" onclick="test$$$()">
+        </div>
+        <div class="TheLast">
+            <input type="button" name="MyFourthButton" value="Undefined用typeof检验" onclick="test$$$$()">
+        </div>
+        <div class="TheNext">
+            <input type="button" name="MyFifthButton" value="Undefined值的判定" onclick="_$test()">
+        </div>
+        <div class="TheThen">
+            <input type="button" name="MySixthButton" value="数值转换函数Number()" onclick="write1()">
+        </div>
+    <!--</div>-->
+</body>
+</html>
