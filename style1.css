@@ -1,0 +1,31 @@
+body {
+    background-color: lawngreen;
+}
+form{
+    background-color: floralwhite;
+    text-align: center;
+}
+.div8{
+    background-color: antiquewhite;
+    text-align: center;
+}
+.div9{
+    text-align: right;
+}
+.divs{
+    width:120px;
+    height:150px;
+    background-color:red;
+    position:relative;/*使其发生相对位移*/
+    animation:anim 5s infinite alternate;/*无限的 交替*/
+}
+form{
+     background-color: gold;
+ }
+@keyframes anim {/*格式相当重要*/
+    0%{background: darkgreen ;left:0; top:0}
+    25%{background: gold ;left:1470px ;top:0}
+    50%{background: aqua ;left:1470px ;top:500px}
+    75%{background: blueviolet; left:0; top:500px}
+    100%{background: chartreuse ;left :0 ;top:0}
+}

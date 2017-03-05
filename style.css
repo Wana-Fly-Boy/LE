@@ -1,0 +1,29 @@
+.div0{
+    background-color: chartreuse;
+}
+body{
+    background-color: aquamarine;
+}
+h2{
+    background-color: dodgerblue;
+}
+p a{
+    text-decoration: none;
+    font-size: larger;
+    background-color: lawngreen;
+}
+.div2{
+    background-color: lawngreen;
+    text-align: center;
+}
+.div1{
+    background-color: dodgerblue;
+    text-align: center;
+}
+.div3{
+    background-color: dodgerblue;
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
